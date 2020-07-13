@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+<session-factory>
+	<!-- 1，数据库连接信息 -->
+	<property name="dialect">
+		org.hibernate.dialect.MySQL5InnoDBDialect
+	</property>
+
+	<!-- 2，其他配置 -->
+	<property name="show_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+
+	<!-- 3，导入映射文件 -->
+	<mapping class="com.superzmz.www.bean.User"/>
+	<mapping class="com.superzmz.www.bean.Department"/>
+	<mapping class="com.superzmz.www.bean.Role"/>
+	<mapping class="com.superzmz.www.bean.Privilege"/>
+	<mapping class="com.superzmz.www.bean.LeaveBean"/>
+	<mapping class="com.superzmz.www.bean.LeaveApprover"/>
+	<mapping class="com.superzmz.www.bean.Message"/>
+	<mapping class="com.superzmz.www.bean.Notice"/>
+	<mapping class="com.superzmz.www.bean.Photo"/>
+	<mapping class="com.superzmz.www.bean.Timecard"/>
+	<mapping class="com.superzmz.www.bean.Schedule"/>
+	<mapping class="com.superzmz.www.bean.ScheduleApprover"/>
+
+</session-factory>
+
+</hibernate-configuration>
